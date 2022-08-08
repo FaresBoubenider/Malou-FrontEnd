@@ -59,8 +59,8 @@ export class AppComponent {
   ngOnInit(): void {
     //Function that gets all the topics of all the products
     this.visualizerservice.getProductCategorie().subscribe((data) => {
-      let labelTotalCategory = [];
-      let countTotalCategory = [];
+      let labelTotalCategory: String[] = [];
+      let countTotalCategory: ApexNonAxisChartSeries = [];
 
       data['topics'].map((product) => {
         labelTotalCategory.push(product.name);
@@ -101,11 +101,10 @@ export class AppComponent {
       this.listeOffres$ = this.refreshListeOffres$.pipe(
         switchMap((_) => this.visualizerservice.get_data(date))
       );
-
       this.visualizerservice.get_data(date).subscribe((data) => {
         let categorieArray = [];
-        let productCount = [];
-        let labelCategory = [];
+        let productCount: ApexNonAxisChartSeries = [];
+        let labelCategory: String[] = [];
 
         //Once the data is collected, two loops are set up to retrieve the topics of each product
 

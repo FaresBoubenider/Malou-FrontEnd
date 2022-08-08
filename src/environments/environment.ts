@@ -5,6 +5,8 @@
 export const environment = {
   production: false,
   serverUrl: 'http://localhost:3376/',
+  api_token : 'L0BdZujyXDd0pWakIU_5OC_a-r-bqPjk3vOUO4LVU_k'
+
 };
 
 /*

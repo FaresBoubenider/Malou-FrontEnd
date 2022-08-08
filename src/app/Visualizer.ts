@@ -1,4 +1,8 @@
+import {
+  ApexNonAxisChartSeries, 
+} from 'ng-apexcharts';
+
 export class Visualizer {
-  chartElements = [];
-  chartsValues = [];
+  chartElements : String [] = [];
+  chartsValues  : ApexNonAxisChartSeries = [];
 }

@@ -19,11 +19,11 @@ export class VisualizerService {
 
   //preparation of the verification token
 
-  auth_token = 'L0BdZujyXDd0pWakIU_5OC_a-r-bqPjk3vOUO4LVU_k';
+  api_token = environment.api_token;
 
   headers = new HttpHeaders({
     'Content-Type': 'application/json',
-    Authorization: `Bearer ${this.auth_token}`,
+    Authorization: `Bearer ${this.api_token}`,
   });
 
   requestOptions = { headers: this.headers };
