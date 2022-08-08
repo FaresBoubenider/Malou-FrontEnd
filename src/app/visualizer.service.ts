@@ -17,13 +17,8 @@ import { catchError, map } from 'rxjs/operators';
 export class VisualizerService {
   serverUrl = environment.serverUrl;
 
-  //preparation of the verification token
-
-  api_token = environment.api_token;
-
   headers = new HttpHeaders({
     'Content-Type': 'application/json',
-    Authorization: `Bearer ${this.api_token}`,
   });
 
   requestOptions = { headers: this.headers };
